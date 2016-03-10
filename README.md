@@ -513,7 +513,7 @@ Create a direct payin by card:
               Currency: "EUR",
               Amount: 10000
         },
-        DeclaredFees: {               // Required
+        Fees: {                     // Required
               Currency: "EUR",
               Amount: 100
         },

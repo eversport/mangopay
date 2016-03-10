@@ -58,7 +58,7 @@ module.exports = httpClient.extend({
       params: {
           'AuthorId': { required: true }
         , 'DebitedFunds': { required: true }
-        , 'DeclaredFees ': { required: true, default: { Currency: 'EUR', Amount: 0 } }
+        , 'Fees ': { required: true, default: { Currency: 'EUR', Amount: 0 } }
         , 'CreditedWalletId': { required: true }
         , 'ReturnURL': { required: true }
         , 'Culture': { required: true }
