@@ -172,7 +172,7 @@ Create legal user:
       LegalRepresentativeLastName: 'Doe',
       LegalRepresentativeEmail: 'john_doe@mycompany.es',
       HeadquartersAddress: 'Canal Street, Madrid, Spain',
-      LegalRepresentativeAdress: 'Canal Street, Madrid, Spain',
+      LegalRepresentativeAddress: 'Canal Street, Madrid, Spain',
       LegalRepresentativeBirthday: moment('300681', 'DDMMYY').unix(),
       LegalRepresentativeCountryOfResidence: 'ES',
       LegalRepresentativeNationality: 'ES',
@@ -522,6 +522,33 @@ Create a direct payin by card:
         Culture: "nl",
         CardType: "IDEAL",            // Required
         Tag: "payin" // Required
+  
+    }, function(err, payin, res){
+        console.log('err', err);
+        console.log('payin', payin);
+        console.log('res', res.statusCode);
+    })
+```
+
+Create a direct payin by direct debit:
+
+```js
+    mango.payin.createByDirectDebit({         
+        AuthorId: "1167492",        // Required (The user ID of the Payin transaction’s author)
+        CreditedUserId : "1167502", // Required (The ID of the owner of the credited wallet)
+        DebitedFunds: {             // Required
+              Currency: "EUR",
+              Amount: 10000
+        },
+        Fees: {                     // Required
+              Currency: "EUR",
+              Amount: 100
+        },
+        CreditedWalletId: "1167810",  // Required (The ID of the credited wallet)
+        ReturnURL:"https://www.mysite.com",
+        Culture: "de",
+        DirectDebitType: "SOFORT",    // Required
+        Tag: "payin"                  // Required
   
     }, function(err, payin, res){
         console.log('err', err);
