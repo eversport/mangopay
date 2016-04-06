@@ -66,6 +66,21 @@ module.exports = httpClient.extend({
         , 'Tag': { required: false }
       }
     }),
+    
+    createByDirectDebit: httpMethod({
+      method: 'POST',
+      path: '/directdebit/web',
+      params: {
+          'AuthorId': { required: true }
+        , 'DebitedFunds': { required: true }
+        , 'Fees ': { required: true, default: { Currency: 'EUR', Amount: 0 } }
+        , 'CreditedWalletId': { required: true }
+        , 'ReturnURL': { required: true }
+        , 'Culture': { required: true }
+        , 'DirectDebitType': { required: true }
+        , 'Tag': { required: false }
+      }
+    }),
 
     fetch: httpMethod({
       method: 'GET',
