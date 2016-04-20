@@ -131,7 +131,8 @@ module.exports = httpClient.extend({
       method: 'PUT',
       path: '../cards/{Id}',
       params: {
-          'Id': { required: true }    
+          'Id': { required: true },
+          'Active': { required: false, default: false}
       }
   })
 

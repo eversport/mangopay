@@ -490,11 +490,11 @@ Create a direct payin by tokenized card:
               Currency: "EUR",
               Amount: 100
         },
-        CreditedWalletId: "1167810",  // Required (The ID of the credited wallet)
-        CardId: "1262419",            // Required
+        CreditedWalletId: "1167810",                   // Required (The ID of the credited wallet)
+        CardId: "1262419",                             // Required
         SecureMode:"DEFAULT",
-        SecureModeReturnURL:"https://www.mysite.com",
-        Tag: "payin" // Required
+        SecureModeReturnURL:"https://www.mysite.com",  //Required
+        Tag: "payin"                                   // Required
 
     }, function(err, payin, res){
         console.log('err', err);
