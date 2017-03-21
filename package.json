@@ -1,13 +1,19 @@
 {
-  "name": "mangopay",
+  "name": "@eversports/mangopay",
   "version": "1.0.0",
   "description": "Mango API wrapper",
   "homepage": "https://github.com/larafale/mangopay",
   "author": "Louis Grellet @Larafale <as1cron@gmail.com>",
+  "contributors": [
+    {
+      "name": "Christoph Bitzner",
+      "email": "christoph.bitzner@eversports.com"
+    }
+  ],
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/larafale/mangopay.git"
+    "url": "git://github.com/eversport/mangopay"
   },
   "engines": {
     "node": "0.10.x"
